@@ -1,0 +1,26 @@
+{
+  "name": "string-class",
+  "version": "1.0.0",
+  "description": "extension of javascript string class",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andela-tisrael/checkpoint-string-class.git"
+  },
+  "keywords": [
+    "string",
+    "prototype"
+  ],
+  "author": "Israel Tomilayo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-tisrael/checkpoint-string-class/issues"
+  },
+  "homepage": "https://github.com/andela-tisrael/checkpoint-string-class#readme"
+}
