@@ -96,16 +96,6 @@ describe( 'String Class', () => {
     } );
   } );
 
-  describe( 'reverseWord', () => {
-    it( 'should return the reverse of a word', () => {
-      expect( 'maps'.reverseWord() ).to.equal( 'spam' );
-    } );
-    it( 'should return same string for a word palindrome', () => {
-      expect( 'madam'.reverseWord() ).to.equal( 'madam' );
-      expect( 'mum'.reverseWord() ).to.equal( 'mum' );
-    } );
-  } );
-
   describe( 'toCurrency', () => {
     it( 'should return a currency representation of a number', () => {
       expect( '10000.00'.toCurrency() ).to.equal( '10,000.00' );
