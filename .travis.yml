@@ -3,4 +3,3 @@ dist: trusty
 language: node_js
 node_js:
   - node
-script: node_modules/mocha/bin/mocha test/string-class-test.js
