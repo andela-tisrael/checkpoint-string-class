@@ -51,28 +51,45 @@ const StringClass = {
   },
 
   inverseCase() {
-    return this.replace( /\w/g, ( letter ) => {
-      return /[A-Z]/.test( letter ) ? letter.toLower() : letter.toUpper();
+    return this.replace( /\w/g, ( character ) => {
+      return /[A-Z]/.test( character ) ? character.toLower() : character.toUpper();
     } );
   },
 
   alternatingCase() {
-
+    return this.replace( /\w/g, ( character, index ) => {
+      return ( index + 1 ) % 2 === 0 ? character.toUpper() : character.toLower();
+    } );
   },
 
   getMiddle() {
-
+    const middle = this.length / 2;
+    return ( middle === Math.floor( middle ) ) ?
+      this.substr( middle - 1, 2 ) : this.charAt( middle );
   },
 
   numberWords() {
+    const mapNumbers = {
+      0: 'zero ',
+      1: 'one ',
+      2: 'two ',
+      3: 'three ',
+      4: 'four ',
+      5: 'five ',
+      6: 'six ',
+      7: 'seven ',
+      8: 'eight ',
+      9: 'nine '
+    };
 
+    return this.replace( /\d/g, number => mapNumbers[ number ] ).trim();
   },
 
   isDigit() {
-
+    return /^[-+]?\d$/.test( this );
   },
   doubleCheck() {
-
+    return /(.)\1/.test( this );
   }
 }
 Object.assign( String.prototype, StringClass );

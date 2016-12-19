@@ -136,6 +136,7 @@ describe( 'String Class', () => {
   describe( 'alternatingCase', () => {
     it( 'should return an alternating case for each letter in a string starting with lower case', () => {
       expect( 'Checkpoint'.alternatingCase() ).to.equal( 'cHeCkPoInT' );
+      expect( 'string'.alternatingCase() ).to.equal( 'sTrInG' );
     } );
   } );
 
@@ -172,6 +173,13 @@ describe( 'String Class', () => {
       expect( 'zz'.doubleCheck() ).to.be.true;
       expect( '&&'.doubleCheck() ).to.be.true;
       expect( '  '.doubleCheck() ).to.be.true;
+      expect( '11'.doubleCheck() ).to.be.true;
+    } );
+    it( 'should return "false" if string does not contain double characters', () => {
+      expect( '12'.doubleCheck() ).to.be.false;
+      expect( 'az'.doubleCheck() ).to.be.false;
+      expect( ' 1'.doubleCheck() ).to.be.false;
+      expect( '!&'.doubleCheck() ).to.be.false;
     } );
   } );
 } );
