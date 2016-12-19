@@ -91,8 +91,8 @@ describe( 'String Class', () => {
 
   describe( 'wordCount', () => {
     it( 'should return the correct number of words', () => {
-      expect( 'This is Andela TIA'.word() ).to.equal( 4 );
-      expect( '$this: is[] Andel!a'.word() ).to.equal( 3 );
+      expect( 'This is Andela TIA'.wordCount() ).to.equal( 4 );
+      expect( '$this: is[] Andel!a'.wordCount() ).to.equal( 3 );
     } );
   } );
 
