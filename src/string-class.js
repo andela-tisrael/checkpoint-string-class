@@ -6,7 +6,7 @@ const StringClass = {
    * @return {Boolean} True or false depending on the match
    */
   hasVowels() {
-    return /[aeiouAEIOU]/g.test(this);
+    return /[aeiou]/i.test(this);
   },
   /**
    * converts strings to uppercase
@@ -31,7 +31,7 @@ const StringClass = {
    * @return {String} string that has been converted to title case
    */
   ucFirst() {
-    return `${this.slice(0, 1).toUpper()}${this.slice(1).toLower()}`;
+    return `${this.slice(0, 1).toUpper()}${this.slice(1)}`;
   },
   /**
    * checks if a string is a question by looking for '?' sign
@@ -59,7 +59,7 @@ const StringClass = {
    * @return {String} currency representation of the the number in String
    */
   toCurrency() {
-    let roundCurrency = String(Math.round(((Number(this)) + 0.00001) * 100) / 100);
+    let roundCurrency = Number(this).toFixed(2);
     roundCurrency = roundCurrency.indexOf('.') > -1 ? roundCurrency : `${roundCurrency}${'.00'}`;
     return roundCurrency.replace(/./g, (number, index) => {
       return index && number !== '.' && ((roundCurrency.length - index) % 3 === 0) ? `${','}${number}` : number;
@@ -87,7 +87,7 @@ const StringClass = {
    */
   alternatingCase() {
     return this.replace(/\w/g, (character, index) => {
-      return (index + 1) % 2 === 0 ? character.toUpper() : character.toLower();
+      return index % 2 !== 0 ? character.toUpper() : character.toLower();
     });
   },
   /**

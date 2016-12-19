@@ -57,7 +57,7 @@ describe('String Class', () => {
 
   describe('ucFirst', () => {
     it('should return the string with the first letter in upper case', () => {
-      expect('AnDelA'.ucFirst()).to.equal('Andela');
+      expect('AnDelA'.ucFirst()).to.equal('AnDelA');
       expect('tomilayo'.ucFirst()).to.equal('Tomilayo');
     });
     it('should return an unchanged string if first letter is uppercase', () => {
