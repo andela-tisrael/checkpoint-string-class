@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "node_modules/mocha/bin/mocha test/string-class-test.js",
-    "cover": "node_modules/.bin/istanbul node_modules/.bin/cover node_modules/.bin/_mocha test/string-class-test.js",
+    "cover": "./node_modules/.bin/istanbul cover _mocha test/*.*",
     "coveralls": "npm run cover --captureExceptions test/ && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
