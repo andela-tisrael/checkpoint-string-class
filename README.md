@@ -1,2 +1,3 @@
 [![Build Status](https://travis-ci.org/andela-tisrael/checkpoint-string-class.svg?branch=develop)](https://travis-ci.org/andela-tisrael/checkpoint-string-class)
 [![Code Climate](https://codeclimate.com/github/andela-tisrael/checkpoint-string-class/badges/gpa.svg)](https://codeclimate.com/github/andela-tisrael/checkpoint-string-class)
+[![Coverage Status](https://coveralls.io/repos/github/andela-tisrael/checkpoint-string-class/badge.svg?branch=develop)](https://coveralls.io/github/andela-tisrael/checkpoint-string-class?branch=develop)
