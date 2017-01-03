@@ -38,7 +38,7 @@ const StringClass = {
    * @return {Boolean} true or false depending on the match
    */
   isQuestion() {
-    return /^[A-Za-z0-9\s]+\?$/.test(this.trim());
+    return /^[a-z0-9\s]+\?$/i.test(this.trim());
   },
  /**
    * checks for words in a string
