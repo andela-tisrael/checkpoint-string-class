@@ -31,7 +31,7 @@ const StringClass = {
    * @return {String} string that has been converted to title case
    */
   ucFirst() {
-    return `${this.slice(0, 1).toUpper()}${this.slice(1)}`;
+    return `${this[0].toUpper()}${this.slice(1)}`;
   },
   /**
    * checks if a string is a question by looking for '?' sign
