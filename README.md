@@ -17,7 +17,8 @@ CodeClimate
 Hound CI
 ESLint
 Instabul Test Coverage Generator
-Methods Added
+
+### Methods Added
 
 #### These are the methods added:
 
