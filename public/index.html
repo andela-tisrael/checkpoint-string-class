@@ -41,7 +41,7 @@
 
                             <select class="dropdown" ng-model="selectedMethod" ng-init="selectedMethod = options[0]" ng-options="opt as opt.label for opt in options">
                                 </select>
-                            <input type="submit" name="Submit" ng-click="showResult(stringQuery, selectedMethod)">
+                            <input type="submit" value="Check" ng-click="showResult(stringQuery, selectedMethod)">
                         </h4>
                         <p class="lead">Result: &nbsp;{{result}}</p>
                     </div>
