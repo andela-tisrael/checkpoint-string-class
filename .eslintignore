@@ -1,2 +1,4 @@
 test/string-class-test.js
 public/
+public/angular.min.js
+public/app.js
