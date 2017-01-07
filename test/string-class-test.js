@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-require('../src/string-class');
+require('../public/src/string-class');
 
 describe('String Class', () => {
 
