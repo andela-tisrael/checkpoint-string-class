@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="StringClass">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        String Class
+    </title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="angular.min.js"></script>
+    <!--<script src="modal.js"></script>-->
+    <script src="app.js"></script>
+    <script src="./src/string-class.js"></script>
+</head>
+
+<body ng-controller="StringCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top navigate">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">String Class</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a class="list" id="myBtn" href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="quotes starter-template">
+                <div class="col-md-14">
+                    <div class="todolist">
+                        <h5><span class="first-header">Enter String here:<span>
+                                <span class="second-header">Select your method</span>
+                        </h5>
+                        <h4>
+                            <input type="input" placeholder="Test here" ng-model="stringQuery">
+
+                            <select class="dropdown" ng-model="selectedMethod" ng-init="selectedMethod = options[0]" ng-options="opt as opt.label for opt in options">
+                                </select>
+                            <input type="submit" value="Check" ng-click="showResult(stringQuery, selectedMethod)">
+                        </h4>
+                        <p class="lead">Result: &nbsp;{{result}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4>String Class</h4>
+            </div>
+            <div class="modal-body">
+                <span>String Class Methods</span>
+            </div>
+            <div class="modals-footer">
+                <ul>
+              <li><strong>hasVowels</strong><br><span> Returns true if the string contains vowels.</span></li>
+              <li><strong>toUpper</strong><br><span> Returns the String in question but with all characters in upper cases as applicable.</span></li>
+              <li><strong>toLower</strong><br><span > Returns the String in question but with all characters in their lower cases as applicable.</span></li>
+              <li><strong>ucFirst</strong><br><span > Returns the String in question but changes the First Character to an Upper case.</span></li>
+              <li><strong>isQuestion</strong><br><span > Return true if the string is a question (ending with a question mark).</span></li>
+              <li><strong>words</strong><br><span > Returns a list of the words in the string, as an Array.</span></li>
+              <li><strong>wordCount</strong><br><span > Returns the number of words in the string.</span></li>
+              <li><strong>toCurrency</strong><br><span > Returns a currency representation of the String</span></li>
+              <li><strong>fromCurrency</strong><br><span > Returns a number representation of the Currency String </span></li>
+              <li><strong>inverseCase</strong><br><span > Returns each letter in the string as an inverse of its current case e.g Mr. Ben will return mR. bEN.</span></li>
+              <li><strong>alternatingCase</strong><br><span > Returns the letters in alternating cases. It must start with a lower case e.g Onomatopoeia will return oNoMaToPoEiA.</span></li>
+              <li><strong>getMiddle</strong><br><span > Returns the character(s) in the middle of the string</span></li>
+              <li><strong>numberWords</strong><br><span > Returns the numbers in words e.g 325 will return three two five.</span></li>
+              <li><strong>isDigit</strong><br><span > Returns true if the string is a digit (one number) e.g 3 should return true and 34 will return false.</span></li>
+              <li><strong>doubleCheck</strong><span > Returns true if a string contains double characters (including whitespace character).</span></li>
+                </ul>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p class="footer">Copyright 2016 - Israel Tomilayo - Andela</p>
+    </footer>
+</body>
+ <script src="init.js"></script>
+</html>
