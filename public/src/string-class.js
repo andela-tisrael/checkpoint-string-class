@@ -74,8 +74,8 @@ const StringClass = {
    * @return {String} currency representation of the the number in String
    */
   toCurrency() {
-     return Number(this)
-      ? Number(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g,'$1,')
+    return Number(this)
+    ? Number(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
       : 'Invalid Input';
   },
 
@@ -85,8 +85,11 @@ const StringClass = {
    * @return {Number} number representation of the currency String
    */
   fromCurrency() {
-    let result = Number(this.replace(/(,|\.00)/g, ''));
-    return result ? result : 'Invalid Input'
+    const result = Number(this.replace(/(,|\.00)/g, ''));
+    if (result) {
+      return result;
+    }
+    return 'Invalid Input';
   },
 
   /**
