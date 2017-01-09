@@ -6,29 +6,24 @@ describe('String Class', () => {
   describe('hasVowels', () => {
     it('should return true for strings that has vowels in them', () => {
       expect('word'.hasVowels()).to.be.true;
-      expect('andela'.hasVowels()).to.be.true;
     });
     it('should return true for strings that has vowels no matter the case of the word', () => {
       expect('AndEla'.hasVowels()).to.be.true;
     });
     it('should return false for strings with consonants only', () => {
       expect('cyst'.hasVowels()).to.be.false;
-      expect('Hymn'.hasVowels()).to.be.false;
     });
   });
 
   describe('toUpper', () => {
     it('should convert strings in lowercase to uppercase', () => {
       expect('cyst'.toUpper()).to.equal('CYST');
-      expect('andela'.toUpper()).to.equal('ANDELA');
     });
     it('should convert strings with title case to uppercase', () => {
       expect('Cyst'.toUpper()).to.equal('CYST');
-      expect('Andela'.toUpper()).to.equal('ANDELA');
     });
     it('should convert strings that are mixed with both lowercase and uppercase to uppercase', () => {
       expect('cYsT'.toUpper()).to.equal('CYST');
-      expect('AnDelA'.toUpper()).to.equal('ANDELA');
     });
     it('uppercase strings should remain in uppercase', () => {
       expect('ANDELA'.toUpper()).to.equal('ANDELA');
@@ -38,11 +33,9 @@ describe('String Class', () => {
   describe('toLower', () => {
     it('should convert strings in uppercase to lowercase', () => {
       expect('ANDELA'.toLower()).to.equal('andela');
-      expect('TOMILAYO'.toLower()).to.equal('tomilayo');
     });
     it('should convert strings with title case to lowercase', () => {
       expect('Andela'.toLower()).to.equal('andela');
-      expect('Tomilayo'.toLower()).to.equal('tomilayo');
     });
     it('should convert strings that are mixed with both lowercase and uppercase to lowercase', () => {
       expect('cYsT'.toLower()).to.equal('cyst');
@@ -51,7 +44,6 @@ describe('String Class', () => {
     });
     it('lowercase strings should remain in lowercase', () => {
       expect('andela'.toLower()).to.equal('andela');
-      expect('tomilayo'.toLower()).to.equal('tomilayo');
     });
   });
 
@@ -62,7 +54,6 @@ describe('String Class', () => {
     });
     it('should return an unchanged string if first letter is uppercase', () => {
       expect('Andela'.ucFirst()).to.equal('Andela');
-      expect('Tomilayo'.ucFirst()).to.equal('Tomilayo');
     });
   });
 
@@ -72,6 +63,7 @@ describe('String Class', () => {
     });
     it('should return "false" if the entire string is not a question', () => {
       expect('How? are you'.isQuestion()).to.be.false;
+      expect('I love biscuit'.isQuestion()).to.be.false;
     });
     it('should return "false" if the string does not contain at least one alphanumeric character', () => {
       expect('?'.isQuestion()).to.be.false;
@@ -110,10 +102,10 @@ describe('String Class', () => {
 
   describe('fromCurrency', () => {
     it('should return a number representation of the currency', () => {
-      expect('123,456,789.98'.fromCurrency()).to.equal('123456789.98');
+      expect('123,456,789.98'.fromCurrency()).to.equal(123456789.98);
     });
     it('should return a number representation of the currency without insignificant zeroes', () => {
-      expect('123,456,789.00'.fromCurrency()).to.equal('123456789');
+      expect('123,456,789.00'.fromCurrency()).to.equal(123456789);
     });
   });
 
@@ -151,10 +143,6 @@ describe('String Class', () => {
     });
     it('should return "false" if string is not a single digit', () => {
       expect('77'.isDigit()).to.be.false;
-    });
-    it('should be able to handle negative and positive operators', () => {
-      expect('-7'.isDigit()).to.be.true;
-      expect('+7'.isDigit()).to.be.true;
     });
   });
 
