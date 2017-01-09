@@ -98,6 +98,9 @@ describe('String Class', () => {
     it('should return a currency representation with two decimals', () => {
       expect('123456.78945'.toCurrency()).to.equal('123,456.79');
     });
+    it ('should return error for invalid input', () => {
+      expect('hello'.fromCurrency()).to.equal('Invalid Input')
+    });
   });
 
   describe('fromCurrency', () => {
@@ -106,6 +109,9 @@ describe('String Class', () => {
     });
     it('should return a number representation of the currency without insignificant zeroes', () => {
       expect('123,456,789.00'.fromCurrency()).to.equal(123456789);
+    });
+    it ('should return error for invalid input', () => {
+      expect('hello'.fromCurrency()).to.equal('Invalid Input')
     });
   });
 
