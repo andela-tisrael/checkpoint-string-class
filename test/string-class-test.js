@@ -39,8 +39,6 @@ describe('String Class', () => {
     });
     it('should convert strings that are mixed with both lowercase and uppercase to lowercase', () => {
       expect('cYsT'.toLower()).to.equal('cyst');
-      expect('AnDelA'.toLower()).to.equal('andela');
-      expect('ToMilaYO'.toLower()).to.equal('tomilayo');
     });
     it('lowercase strings should remain in lowercase', () => {
       expect('andela'.toLower()).to.equal('andela');
@@ -49,7 +47,6 @@ describe('String Class', () => {
 
   describe('ucFirst', () => {
     it('should return the string with the first letter in upper case', () => {
-      expect('AnDelA'.ucFirst()).to.equal('AnDelA');
       expect('tomilayo'.ucFirst()).to.equal('Tomilayo');
     });
     it('should return an unchanged string if first letter is uppercase', () => {
@@ -158,6 +155,9 @@ describe('String Class', () => {
       expect('&&'.doubleCheck()).to.be.true;
       expect('  '.doubleCheck()).to.be.true;
       expect('11'.doubleCheck()).to.be.true;
+    });
+    it('should return true if a string contain double characters', () => {
+      expect('11 ddmf  '.doubleCheck()).to.be.true;
     });
     it('should return "false" if string does not contain double characters', () => {
       expect('12'.doubleCheck()).to.be.false;
