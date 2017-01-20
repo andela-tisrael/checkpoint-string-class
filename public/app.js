@@ -1,6 +1,5 @@
-//var app = angular.module('StringClass',[]);
 angular.module('StringClass', [])
-.controller('StringCtrl', ['$scope', ($scope) => {
+  .controller('StringCtrl', ['$scope', ($scope) => {
     $scope.options = [
       { id: 0, label: 'hasVowels'},
       { id: 1, label: 'toUpper'},
@@ -34,4 +33,4 @@ angular.module('StringClass', [])
     let applyMethod = (method, query) => {
       return query[method]();
     };
-    }]);
+  }]);

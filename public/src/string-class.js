@@ -89,8 +89,8 @@ const StringClass = {
    */
   toCurrency() {
     return Number(this)
-    ? Number(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
-      : 'Invalid Input';
+           ? Number(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+           : 'Invalid Input';
   },
 
   /**
@@ -192,6 +192,5 @@ const StringClass = {
   doubleCheck() {
     return /(.)\1/.test(this);
   }
-
 };
 Object.assign(String.prototype, StringClass);

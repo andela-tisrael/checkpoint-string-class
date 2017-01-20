@@ -1,13 +1,13 @@
-var expect = require('chai').expect;
+const expect = require('chai').expect;
 require('../public/src/string-class');
 
 describe('String Class', () => {
 
   describe('hasVowels', () => {
-    it('should return true for strings that has vowels in them', () => {
+    it('should return true for strings that have vowels in them', () => {
       expect('word'.hasVowels()).to.be.true;
     });
-    it('should return true for strings that has vowels no matter the case of the word', () => {
+    it('should return true for strings that have vowels no matter the case of the word', () => {
       expect('AndEla'.hasVowels()).to.be.true;
     });
     it('should return false for strings with consonants only', () => {
@@ -156,7 +156,7 @@ describe('String Class', () => {
       expect('  '.doubleCheck()).to.be.true;
       expect('11'.doubleCheck()).to.be.true;
     });
-    it('should return true if a string contain double characters', () => {
+    it('should return true if a string contains double characters', () => {
       expect('11 ddmf  '.doubleCheck()).to.be.true;
     });
     it('should return "false" if string does not contain double characters', () => {
