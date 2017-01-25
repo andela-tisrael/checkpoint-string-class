@@ -7,39 +7,39 @@ body {
   text-align: center;
   align-self: center;
 }
-.todolist{
+.todolist {
     background-color:#FFF;
     padding:20px 20px 10px 20px;
     margin-top:30px;
 }
-.form-control{
+.form-control {
 	max-width: 350px !important;
 	padding:20px 20px 10px 20px;
 }
-.footer{
+.footer {
     text-align: center;
     margin-top: 300px;
     /*color: #4081f5;*/
 }
-.navigate{
+.navigate {
    background-color: #3367d6 !important;
    /*#2980B9 !important;*/
 }
 .navbar-brand,
-.list{
+.list {
     color: #fff !important;
 }
 .navbar-brand:hover,
-.list:hover{
+.list:hover {
     color: #9d9d9d !important;
 }
-.nav-brand:hover{
+.nav-brand:hover {
     color:#FFF;
 }
-.first-header{
+.first-header {
     margin-left: -105px;
 }
-.second-header{
+.second-header {
     margin-left: 125px;
 }
 h4s,
@@ -47,7 +47,7 @@ h5s,
 .leads{
     color: #4081f5;
 }
-.dropdown{
+.dropdown {
     margin-left: 20px;
 }
 
@@ -125,6 +125,6 @@ h5s,
     background-color: #fff;
     /*color: #fff;*/
 }
-.method{
+.method {
     padding-top: 8px;
 }
