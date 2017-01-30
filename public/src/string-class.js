@@ -102,10 +102,7 @@ const StringClass = {
    */
   fromCurrency() {
     const result = Number(this.replace(/(,|\.00)/g, ''));
-    if (result) {
-      return result;
-    }
-    return 'Invalid Input';
+    return result ? result : 'Invalid Input';
   },
 
   /**
