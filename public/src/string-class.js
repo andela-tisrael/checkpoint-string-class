@@ -1,3 +1,4 @@
+/*  eslint no-unneeded-ternary:0 */
 const StringClass = {
   /**
    * has vowels
